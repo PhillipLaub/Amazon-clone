@@ -3,6 +3,7 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "./StateProvider";
+import { Link } from "react-router-dom";
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -17,7 +18,19 @@ function Checkout() {
         />
         <div>
           <h3>Hello, {user?.email}</h3>
-          <h2 className="checkout__title">Your Cart</h2>
+          <h2 className="checkout__title">
+            Your Cart {basket?.length >= 1 ? "" : "is empty."}
+          </h2>
+
+          {basket?.length >= 1 ? (
+            ""
+          ) : (
+            <p>
+              Your Shopping Cart lives to serve. Give it purpose — fill it with
+              groceries, clothing, household supplies, electronics, and more.
+              Continue shopping on the <Link to="/">Amazon Clone homepage</Link>
+            </p>
+          )}
 
           {basket.map((item) => (
             <CheckoutProduct

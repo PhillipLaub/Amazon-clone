@@ -13,6 +13,10 @@
   min-width: 100px;
 }
 
+.product:hover {
+  opacity: 0.9;
+}
+
 .product > img {
   max-height: 200px;
   width: 100%;

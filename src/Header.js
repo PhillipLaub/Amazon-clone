@@ -51,10 +51,14 @@ function Header() {
 
         <Link to="/checkout">
           <div className="header__optionBasket">
-            <ShoppingBasketIcon />
-            <span className="header__optionLineTwo header__basketCount">
+            <span
+              className={`header__optionLineTwo header__basketCount ${
+                basket?.length >= 1 ? "basketFull" : "basketEmpty"
+              }`}
+            >
               {basket?.length}
             </span>
+            <ShoppingBasketIcon />
           </div>
         </Link>
       </div>

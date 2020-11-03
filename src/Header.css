@@ -15,6 +15,10 @@
   margin-top: 18px;
 }
 
+.header__logo:hover {
+  opacity: 0.9;
+}
+
 .header__search {
   display: flex;
   flex: 1;
@@ -46,6 +50,29 @@
   margin-left: 10px;
   margin-right: 10px;
   color: white;
+  line-height: 110%;
+  padding: 10px;
+}
+
+.header__option:hover {
+  opacity: 0.9;
+  border: 1px solid white;
+  padding: 9px;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+  line-height: 110%;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.header__optionBasket:hover {
+  opacity: 0.9;
+  border: 1px solid white;
+  padding: 9px;
 }
 
 .header__optionLineOne {
@@ -57,13 +84,16 @@
   font-weight: 800;
 }
 
-.header__optionBasket {
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
 .header__basketCount {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.basketFull {
+  color: orange;
+  font-size: 15px;
+}
+
+.basketEmpty {
+  color: white;
 }
