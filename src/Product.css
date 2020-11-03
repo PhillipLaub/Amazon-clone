@@ -14,7 +14,9 @@
 }
 
 .product:hover {
-  opacity: 0.9;
+  transform: scale(1.05);
+  transition: 0.5s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .product > img {
@@ -30,6 +32,12 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+}
+
+.product > button:hover {
+  opacity: 0.9;
 }
 
 .product__price {
@@ -39,6 +47,7 @@
   text-align: left;
   height: 100px;
   margin-bottom: 15px;
+  padding-top: 12px;
 }
 
 .product__rating {
