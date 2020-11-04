@@ -1,3 +1,19 @@
+# Amazon Clone - E-commerce App
+
+Deployed Site: [Amazon Clone](https://clone-4fb8f.web.app/)
+
+E-Commerce App, Amazon clone: user authentication, firebase deployment/hosting/database, payment processing with Stripe.
+
+![Amazon Home](amazonclone/public/Home_desktop.png)
+
+![Amazon Sign In](amazonclone/public/Sign_in.png)
+
+![Amazon Cart](amazonclone/public/checkout_desktop.png)
+
+![Amazon Checkout](amazonclone/public/checkout2_desktop.png)
+
+![Amazon Mobile](amazonclone/public/mobile.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
