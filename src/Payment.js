@@ -7,6 +7,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
 import axios from "./axios";
+import { db } from "./firebase";
 
 function Payment({ value }) {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -25,7 +26,9 @@ function Payment({ value }) {
     const getClientSecret = async () => {
       const response = await axios({
         method: "post",
-        url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
+        url: `/payments/create?total=${Math.round(
+          getBasketTotal(basket) * 100
+        )}`,
       });
       setClientSecret(response.data.clientSecret);
     };
@@ -48,9 +51,23 @@ function Payment({ value }) {
       .then(({ paymentIntent }) => {
         //paymentIntent = payment confirmation
 
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
 
         history.replace("/orders");
       });
@@ -98,12 +115,13 @@ function Payment({ value }) {
           </div>
         </div>
         <div className="payment__section">
-          <div className="payment__title">
+          <div className="payment__title desktopView">
             <h3>Payment Method</h3>
           </div>
+
           <div className="payment__details">
             <form onSubmit={handleSubmit}>
-              <CardElement onChange={handleChange} />
+              <CardElement onChange={handleChange} className="payment__cc" />
 
               <div className="payment__priceContainer">
                 <CurrencyFormat

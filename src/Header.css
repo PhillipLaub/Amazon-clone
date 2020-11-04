@@ -97,3 +97,7 @@
 .basketEmpty {
   color: white;
 }
+
+.header__nav > a {
+  text-decoration: none;
+}

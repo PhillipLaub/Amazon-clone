@@ -17,18 +17,18 @@ function Home() {
         <HomeCarousel className="home__image" />
         {/* Carousel End */}
 
-        <div className="home__row">
+        <div className="home__row home__firstRow">
           <Product
             id="49538094"
             title="
-            Instant Pot Duo Plus 9-in-1 Electric Pressure Cooker, Sterilizer, Slow Cooker, Rice Cooker, Steamer, saute, Yogurt Maker, and Warmer, 6 Quart, 15 One-Touch..."
+            Instant Pot Duo Plus 9-in-1 Electric Pressure Cooker"
             image="https://images-na.ssl-images-amazon.com/images/I/71KvB9WVwsL._AC_SL1500_.jpg"
             price={79.99}
             rating={4}
           />
           <Product
             id="49538"
-            title="Pulaski Home Comfort Mid Century Modern Wood Frame Accent Chair, "
+            title="Pulaski Home Comfort Mid Century Modern Wood Frame Accent Chair "
             image="https://images-na.ssl-images-amazon.com/images/I/A15DwL7kwML._AC_SL1500_.jpg"
             price={97.29}
             rating={5}
