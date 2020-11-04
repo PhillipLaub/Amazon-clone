@@ -16,6 +16,10 @@ E-Commerce App, Amazon clone: user authentication, firebase deployment/hosting/d
 
 ![Amazon Mobile](public/mobile.png)
 
+![Amazon Stripe](public/stripe.png)
+
+![Amazon Stripe2](public/stripe2.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
