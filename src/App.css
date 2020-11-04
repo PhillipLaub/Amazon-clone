@@ -80,4 +80,20 @@ p {
   .payment__details {
     flex: 1 1 !important;
   }
+
+  .subtotal > button {
+    width: 80vw !important;
+  }
+
+  .payment__details > form > div > button {
+    width: 80vw !important;
+  }
+
+  .orders {
+    display: contents !important;
+  }
+
+  .order__id {
+    position: initial !important;
+  }
 }
