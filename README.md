@@ -12,6 +12,8 @@ E-Commerce App, Amazon clone: user authentication, firebase deployment/hosting/d
 
 ![Amazon Checkout](public/checkout2_desktop.png)
 
+![Amazon Orders](public/orders_desktop.png)
+
 ![Amazon Mobile](public/mobile.png)
 
 # Getting Started with Create React App
